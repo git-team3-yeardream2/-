@@ -46,6 +46,6 @@ class refund_data:
         only_refund = len(refund_plus_df) - 2*len(refund_pair_df)
 	 #오직 이번기간에 환불한 건수를 구했다. #한 번이라도 환불한 건수 - payment,refund 쌍을 뺌
         refund_ratio = round((len(refund_sub_df) - only_refund) / (len(sub_df) - only_refund) *100 , 2)
-	        #환불율을 구하면 >> 분모에는 (전체 데이터 분석 거래수 - 이번기에 구매 안 하고 환부란 한 거래 건수) 
-	,분자에는 (전체 환불 거래수 - 이번기에 구매 안 하고 환부란 한 거래 건수)
+	        # 환불율을 구하면 >> 분모에는 (전체 데이터 분석 거래수 - 이번기에 구매 안 하고 환부란 한 거래 건수) 
+		#,분자에는 (전체 환불 거래수 - 이번기에 구매 안 하고 환부란 한 거래 건수)
         return refund_ratio
